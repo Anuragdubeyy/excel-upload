@@ -21,10 +21,10 @@ export default function TopBar({ toggleSideBar }: Props) {
   }, []);
   return (
     <header className="border-b bg-white border-border z-50 w-full fixed shadow">
-      <nav className="flex items-center flex justify-between py-2 px-5">
+      <nav className="flex  items-center justify-between py-2 px-5">
         <div className="flex items-center w-full justify-start">
           <Link to="/" className="mr-14 flex items-center gap-3">
-            <h1 className="text-2xl font-semibold text-primary ">
+            <h1 className="text-2xl   text-primary ">
               Excel Upload
             </h1>
           </Link>
