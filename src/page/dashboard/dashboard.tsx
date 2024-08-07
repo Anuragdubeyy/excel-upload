@@ -1,6 +1,6 @@
 import { useState } from "react";
 import * as XLSX from "xlsx";
-import Pagination from "../../component/common/Pagination";
+import Pagination from "../../components/common/Pagination";
 
 const Dashboard: React.FC = () => {
   const [fileData, setFileData] = useState<[][]>([]);
@@ -36,32 +36,47 @@ const Dashboard: React.FC = () => {
   const totalPages = Math.ceil((fileData.length - 1) / rowsPerPage);
 
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <input type="file" accept=".xlsx, .xls" onChange={handleFileUpload} />
-      <div>
-        <h2>File Data:</h2>
+    <div className="p-6 bg-gray-100 min-h-screen">
+      <h1 className="text-3xl font-bold text-green-500 mb-4">Dashboard</h1>
+      <input
+        type="file"
+        accept=".xlsx, .xls"
+        onChange={handleFileUpload}
+        className="mb-4 p-2 border border-gray-300 rounded-md"
+      />
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-2xl font-semibold mb-4">File Data:</h2>
         {fileData.length > 0 && (
           <>
-            <table>
+            <table className="min-w-full bg-white">
               <thead>
                 <tr>
                   {fileData[0].map((header, index) => (
-                    <th key={index}>{header}</th>
+                    <th
+                      key={index}
+                      className="py-2 px-4 border-b border-gray-300 text-left text-gray-600 font-semibold"
+                    >
+                      {header}
+                    </th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 {paginatedData.map((row, rowIndex) => (
-                  <tr key={startRow + rowIndex}>
+                  <tr key={startRow + rowIndex} className="even:bg-gray-50">
                     {row.map((cell, cellIndex) => (
-                      <td key={cellIndex}>{cell}</td>
+                      <td
+                        key={cellIndex}
+                        className="py-2 px-4 border-b border-gray-300"
+                      >
+                        {cell}
+                      </td>
                     ))}
                   </tr>
                 ))}
               </tbody>
             </table>
-
+  
             <Pagination
               page={currentPage}
               totalProducts={totalPages}
@@ -72,6 +87,7 @@ const Dashboard: React.FC = () => {
       </div>
     </div>
   );
+  
 };
 
 export default Dashboard;

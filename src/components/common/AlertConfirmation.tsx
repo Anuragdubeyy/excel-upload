@@ -51,8 +51,7 @@
 // }
 
 import React from 'react';
-import {
-  AlertDialog,
+import { AlertDialog ,
   AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
@@ -61,7 +60,18 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from '../shared/ui/alert-dialog';
+} from '../ui/ui/alert-dialog';
+// import {
+//   AlertDialog,
+//   AlertDialogAction,
+//   AlertDialogCancel,
+//   AlertDialogContent,
+//   AlertDialogDescription,
+//   AlertDialogFooter,
+//   AlertDialogHeader,
+//   AlertDialogTitle,
+//   AlertDialogTrigger,
+// } from '../../ui/ui/alert-dialog';
 
 interface Props {
   title: React.ReactNode;

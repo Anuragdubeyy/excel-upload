@@ -1,7 +1,7 @@
 import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Button } from "./ui/button";
 import { useEffect, useState } from "react";
+import { Button } from "../ui/ui/button";
 
 interface Props {
   toggleSideBar: () => void;
@@ -28,12 +28,12 @@ export default function TopBar({ toggleSideBar }: Props) {
               Excel Upload
             </h1>
           </Link>
-          {/* <Button
+          <Button
             onClick={toggleSideBar}
             className="mr-3 bg-transparent text-primary hover:bg-transparent"
           >
             <Menu size={30} />
-          </Button> */}
+          </Button>
         </div>
         <div className="flex flex-col">
           <span className="flex text-sm justify-end">{currentTimestamp}</span>

@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
-import TopBar from "../../component/shared/Topbar";
-import LeftSidebar from "../../component/shared/LeftSidebar";
 import { useState } from "react";
+import TopBar from "../../components/shared/Topbar";
+import LeftSideBar from "../../components/shared/LeftSidebar";
 
 const Container = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(true);
@@ -13,7 +13,7 @@ const Container = () => {
     <>
       <TopBar toggleSideBar={toggleSideBar} />
       <div className="flex">
-        <LeftSidebar isSideBarOpen={isSideBarOpen} />
+        <LeftSideBar isSideBarOpen={isSideBarOpen} />
         <main className="w-full pt-16">
           <Outlet />
         </main>

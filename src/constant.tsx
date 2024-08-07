@@ -3,7 +3,7 @@ import { LayoutDashboard } from "lucide-react";
 export const leftSideBarLinks = [
     {
       label: 'Upload',
-      to: '/dashboard',
+      to: '/',
       icon: <LayoutDashboard />,
     },
 ]

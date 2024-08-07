@@ -1,8 +1,7 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import {  Route, Routes } from "react-router-dom";
 import Dashboard from "../page/dashboard/dashboard";
-import loadable from "@loadable/component";
-
-const App = loadable(() => import("../container/App"));
+// import loadable from "@loadable/component";
+import App from "../container/App"
 
 
 const AppRoutes = () => {
@@ -13,7 +12,7 @@ const AppRoutes = () => {
             <App />
         }
       >
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/" element={<Dashboard />} />
       </Route>
     </Routes>
   );

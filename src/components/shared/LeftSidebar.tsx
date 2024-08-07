@@ -1,8 +1,8 @@
 import { LogOut } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { leftSideBarLinks } from "../../constant";
+import { Button } from "../ui/ui/button";
 import AlertConfirmation from "../common/AlertConfirmation";
-import { Button } from "./ui/button";
+import { leftSideBarLinks } from "../../constant";
 
 interface Props {
   isSideBarOpen: boolean;
