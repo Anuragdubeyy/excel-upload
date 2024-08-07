@@ -4,6 +4,8 @@ Our platform features an advanced Excel file upload capability, designed to stre
 
 Key Features
 Easy Excel File Upload:
+![image](https://github.com/user-attachments/assets/3e561af6-e55b-4fe3-a113-7afca0ebbdb0)
+
 
 Simple and intuitive interface for uploading Excel files.
 Supports various Excel file formats.
