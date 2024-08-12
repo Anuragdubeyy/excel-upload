@@ -2,7 +2,9 @@ import { useState } from "react";
 import * as XLSX from "xlsx";
 import Pagination from "../../components/common/Pagination";
 
+
 const Dashboard: React.FC = () => {
+  // State variables to store the file data and the current page number
   const [fileData, setFileData] = useState<[][]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const rowsPerPage = 20;
@@ -34,6 +36,7 @@ const Dashboard: React.FC = () => {
   const endRow = startRow + rowsPerPage;
   const paginatedData = fileData.slice(startRow, endRow);
   const totalPages = Math.ceil((fileData.length - 1) / rowsPerPage);
+ 
 
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
